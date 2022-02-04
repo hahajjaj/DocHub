@@ -33,8 +33,6 @@ extension Color {
 
 struct Test_cell_design: View {
     
-    var categories: [String] = ["Teeria", "Bio & Equo"]
-    
     let document_detail : DocumentSet
     @ObservedObject var downloader = Downloader_PDF_ViewModel()
 
@@ -90,7 +88,7 @@ struct Test_cell_design: View {
         }
         .padding()
 //        .padding(.bottom)
-        .clipShape(RoundedRectangle(cornerRadius: 15))
+//        .clipShape(RoundedRectangle(cornerRadius: 15))
     }
 }
 

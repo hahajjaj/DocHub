@@ -37,6 +37,11 @@
 		BBEE5A28267CE17A001F940D /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE5A27267CE17A001F940D /* NavigationBarView.swift */; };
 		BBEE5A2B267D35DE001F940D /* SchulVokalDotless.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBEE5A2A267D35DE001F940D /* SchulVokalDotless.ttf */; };
 		BBEE5A2D267D4C8C001F940D /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE5A2C267D4C8C001F940D /* Profil.swift */; };
+		D0EAAFDC27AC9B5100D6254A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAAFDB27AC9B5100D6254A /* AuthView.swift */; };
+		D0EAAFDE27ACA42500D6254A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAAFDD27ACA42500D6254A /* Extensions.swift */; };
+		D0EAAFE027ACA8D500D6254A /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0EAAFDF27ACA8D500D6254A /* BebasNeue-Regular.ttf */; };
+		D0EAAFE227ACA8E200D6254A /* theboldfont.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0EAAFE127ACA8E200D6254A /* theboldfont.ttf */; };
+		D0EAAFE427AD71ED00D6254A /* SafariAuthULB.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAAFE327AD71EC00D6254A /* SafariAuthULB.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -72,6 +77,11 @@
 		BBEE5A27267CE17A001F940D /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		BBEE5A2A267D35DE001F940D /* SchulVokalDotless.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SchulVokalDotless.ttf; sourceTree = "<group>"; };
 		BBEE5A2C267D4C8C001F940D /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		D0EAAFDB27AC9B5100D6254A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
+		D0EAAFDD27ACA42500D6254A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		D0EAAFDF27ACA8D500D6254A /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
+		D0EAAFE127ACA8E200D6254A /* theboldfont.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = theboldfont.ttf; sourceTree = "<group>"; };
+		D0EAAFE327AD71EC00D6254A /* SafariAuthULB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SafariAuthULB.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -91,13 +101,6 @@
 				BB24908B268607F900A7382A /* BarColor.swift */,
 			);
 			path = ViewModifier;
-			sourceTree = "<group>";
-		};
-		BB249099268A557700A7382A /* DATA */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = DATA;
 			sourceTree = "<group>";
 		};
 		BB3804EF2695E9F90022C903 /* PROFIL */ = {
@@ -171,7 +174,6 @@
 		BBA7017D267117FA009A413C /* DocHub */ = {
 			isa = PBXGroup;
 			children = (
-				BB249099268A557700A7382A /* DATA */,
 				BB24908A268607D800A7382A /* ViewModifier */,
 				BBA7017E267117FA009A413C /* DocHubApp.swift */,
 				BBB9025D2684F20C007F90A1 /* Views */,
@@ -182,6 +184,7 @@
 				BBA70187267117FF009A413C /* Info.plist */,
 				BBA70184267117FF009A413C /* Preview Content */,
 				BB3804F22695EA700022C903 /* BROUILLONS */,
+				D0EAAFDD27ACA42500D6254A /* Extensions.swift */,
 			);
 			path = DocHub;
 			sourceTree = "<group>";
@@ -223,6 +226,8 @@
 				BB3804F12695EA2A0022C903 /* PLUGIN PDF */,
 				BB3804F02695EA000022C903 /* LIKED */,
 				BB3804EF2695E9F90022C903 /* PROFIL */,
+				D0EAAFDB27AC9B5100D6254A /* AuthView.swift */,
+				D0EAAFE327AD71EC00D6254A /* SafariAuthULB.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -230,6 +235,8 @@
 		BBEE5A29267D35B7001F940D /* Fonts */ = {
 			isa = PBXGroup;
 			children = (
+				D0EAAFE127ACA8E200D6254A /* theboldfont.ttf */,
+				D0EAAFDF27ACA8D500D6254A /* BebasNeue-Regular.ttf */,
 				BBEE5A2A267D35DE001F940D /* SchulVokalDotless.ttf */,
 			);
 			path = Fonts;
@@ -294,7 +301,9 @@
 			files = (
 				BBA70186267117FF009A413C /* Preview Assets.xcassets in Resources */,
 				BBA70183267117FF009A413C /* Assets.xcassets in Resources */,
+				D0EAAFE027ACA8D500D6254A /* BebasNeue-Regular.ttf in Resources */,
 				BBEE5A2B267D35DE001F940D /* SchulVokalDotless.ttf in Resources */,
+				D0EAAFE227ACA8E200D6254A /* theboldfont.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -312,6 +321,7 @@
 				BB2490922688E09900A7382A /* CoursDetailsViewModel.swift in Sources */,
 				BB3804FF269628E80022C903 /* ActivityView.swift in Sources */,
 				BB900FF72694F19000CE9F55 /* DocumentPreview.swift in Sources */,
+				D0EAAFDE27ACA42500D6254A /* Extensions.swift in Sources */,
 				BBB90261268504A3007F90A1 /* ProfilViewModel.swift in Sources */,
 				BB3804F72695F1E80022C903 /* SearcheView.swift in Sources */,
 				BBE6166426854F7100DB6EE2 /* ProfilView.swift in Sources */,
@@ -319,7 +329,9 @@
 				BB2490902688DF7300A7382A /* Document_List_View.swift in Sources */,
 				BB3804F42695EAE50022C903 /* MesCours_View.swift in Sources */,
 				BB2490942688E0C900A7382A /* CoursDetailsModel.swift in Sources */,
+				D0EAAFDC27AC9B5100D6254A /* AuthView.swift in Sources */,
 				BB24909F268BD40B00A7382A /* PDFVieweur.swift in Sources */,
+				D0EAAFE427AD71ED00D6254A /* SafariAuthULB.swift in Sources */,
 				BB380505269634CC0022C903 /* Activity_Cell_View.swift in Sources */,
 				BB3804F92695F26E0022C903 /* Cours_cell_View.swift in Sources */,
 				BBA7017F267117FA009A413C /* DocHubApp.swift in Sources */,

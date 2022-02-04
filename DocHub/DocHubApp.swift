@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct DocHubApp: App {
+    @State var auth = false
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if auth {
+                ContentView()
+                    .transition(.move(edge: .trailing))
+            } else {
+                AuthView(signInSuccess: $auth)
+                    .transition(.move(edge: .trailing))
+            }
+            
         }
     }
 }

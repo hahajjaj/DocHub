@@ -13,11 +13,9 @@ struct ActivityView: View {
     var body: some View {
         ZStack(alignment: .leading) {
             Color.white
-                .cornerRadius(12)
             Activity_Cell_View(activite: activite)
         }
         .fixedSize(horizontal: false, vertical: true)
-        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }
 

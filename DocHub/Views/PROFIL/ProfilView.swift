@@ -30,13 +30,15 @@ extension UIColor {
 struct ProfilView: View {
 //    let swiftColor = UIColor(rgb: 0x061826)
     let swiftColor = UIColor(rgb: 0x020202)
+    let customDark = UIColor(rgb: 0x3f363f)
     @ObservedObject var profils = ProfilViewModel()
     @ObservedObject var activites = ActivityViewModel()
     
     init() {
-        UINavigationBar.appearance().barTintColor = swiftColor
-        UINavigationBar.appearance().backgroundColor = swiftColor
-        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : UIColor.white, .font: UIFont.systemFont(ofSize: 20)]
+//        UINavigationBar.appearance().barTintColor = swiftColor
+//        UINavigationBar.appearance().backgroundColor = swiftColor
+//        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : customDark, .font: UIFont.systemFont(ofSize: 20)]
+        
         self.profils.fetchUser()
         self.activites.fetchActivity()
     }
@@ -44,15 +46,14 @@ struct ProfilView: View {
     var body: some View {
         
         NavigationView {
-            VStack{
-                Spacer()
+            VStack(spacing: 0){
+                
                 HStack{
                     ImageView(withURL: "https://dochub.be\(profils.profil?.avatar ?? "")")
                         .clipShape(Circle())
-                        .shadow(radius: 10)
                         .overlay(Circle().stroke(Color.black, lineWidth: 3))
                         .frame(width: 100, height: 100)
-                        .padding(.all)
+                        .padding([.top, .bottom, .trailing])
                     VStack {
                         HStack {
                             Text(profils.profil?.firstName ?? "")
@@ -69,31 +70,48 @@ struct ProfilView: View {
                             .font(.headline)
                             .fontWeight(.bold)
                     }
+                    .padding(.leading, 25)
+                    .padding(.trailing, 20)
                     
                     
                 }
-                Spacer()
-                Divider()
+                .frame(maxWidth: .infinity)
+//                .background(Color(customDark))
+                
+//                Spacer()
+//                Divider()
                 List{
                     ForEach(activites.activite?.results.prefix(10) ?? [], id: \.self){ activitess in
                         ActivityView(activite: activitess)
                         
                     }
-                }.listStyle(InsetListStyle())
+                }
+                .frame(maxWidth: .infinity)
+                .edgesIgnoringSafeArea(.all)
+                .listStyle(PlainListStyle())
+                
                              
 //                VStack(alignment: .leading){
 //                    Text("Token")
 //
 //                    Text(profils.profil?.token.key ?? "")
 //                }
-                Divider()
+//                Divider()
                 
-                ShowPass(tokennnn: profils.profil?.token.key ?? "")
-                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                    .padding(.bottom)
+//                ShowPass(tokennnn: profils.profil?.token.key ?? "")
+//                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+//                    .padding(.bottom)
             }
             
-            .navigationBarTitle("Dochub", displayMode: .inline)
+//            .navigationBarTitle("PROFIL", displayMode: .inline)
+            .navigationBarTitleDisplayMode(.inline)
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                    Text("PROFIL")
+                        .foregroundColor(Color(customDark))
+                        .font(Font.title3.weight(.bold))
+                }
+            }
         }
         
         .accentColor(.white)

@@ -11,6 +11,7 @@ struct MesCours_View: View {
     
     @ObservedObject var profils = ProfilViewModel()
     
+    
     init() {
         self.profils.fetchUser()
     }
@@ -25,9 +26,21 @@ struct MesCours_View: View {
                     
                 }
             }
-            .navigationBarTitle("Mes cours", displayMode: .inline)
+            .frame(maxWidth: .infinity)
+            .edgesIgnoringSafeArea(.horizontal)
+            .listStyle(GroupedListStyle())
+//            .navigationBarTitle("Mes cours", displayMode: .inline)
+            .navigationBarTitleDisplayMode(.inline)
+            
+            .toolbar{
+                ToolbarItem(placement: .navigationBarLeading){
+                    Text("Mes cours")
+                        .foregroundColor(Color(.black))
+                        .font(Font.title3.weight(.bold))
+                }
+            }
         }
-        .accentColor(.white)
+        .accentColor(.black)
     }
 }
 
@@ -48,6 +61,6 @@ struct ActivityView2: View {
             Cours_cell_View(slug: slug, cours_name: cours_name)
         }
         .fixedSize(horizontal: false, vertical: true)
-        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+//        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }

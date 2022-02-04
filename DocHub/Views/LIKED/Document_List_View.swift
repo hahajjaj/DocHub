@@ -18,7 +18,7 @@ struct Document_List_View: View {
                 HStack {
                 Image(systemName: "chevron.left") // BackButton Image
                     .aspectRatio(contentMode: .fit)
-                    .foregroundColor(.white)
+                    .foregroundColor(.black)
 //                    Text("Go Back") //translated Back button title
                 }
             }
@@ -37,12 +37,26 @@ struct Document_List_View: View {
 //                    }
 //                    .border(Color.black)
                     ActivityView3(document: position)
+                    
                 }
             }
+            .frame(maxWidth: .infinity)
+            .edgesIgnoringSafeArea(.all)
+            .listStyle(GroupedListStyle())
         }
-        .navigationTitle(cours_detail.cours_details?.name ?? "")
+//        .navigationTitle(cours_detail.cours_details?.name ?? "")
         .navigationBarBackButtonHidden(true)
         .navigationBarItems(leading: backButton)
+        .navigationBarTitleDisplayMode(.inline)
+        
+        .toolbar{
+            
+            ToolbarItem(placement: .principal){
+                Text(cours_detail.cours_details?.name ?? "")
+                    .foregroundColor(Color(.black))
+                    .font(Font.title3.weight(.bold))
+            }
+        }
     }
 }
 
@@ -58,10 +72,10 @@ struct ActivityView3: View {
     var body: some View {
         ZStack(alignment: .leading) {
             Color.white
-                .cornerRadius(12)
+//                .cornerRadius(12)
             Test_cell_design(document: document)
         }
         .fixedSize(horizontal: false, vertical: true)
-        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+//        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
     }
 }

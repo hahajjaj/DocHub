@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     
     @ObservedObject var profils = ProfilViewModel()
-    @State var selection: Int = 0
+    @State var selection: Int = 2
     
     init() {
         self.profils.fetchUser()
@@ -19,14 +19,13 @@ struct ContentView: View {
     
     var body: some View {
         TabView(selection: $selection){
-            ProfilView()
-                .tag(0)
-            
             SearcheView()
                 .tag(1)
             
             MesCours_View()
                 .tag(2)
+            ProfilView()
+                .tag(0)
         }
         .overlay( // Overlay the custom TabView component here
             Color.white // Base color for Tab Bar
@@ -35,17 +34,19 @@ struct ContentView: View {
                 .overlay(HStack {
                     Spacer()
                     
-                    // First Tab Button
+                    // Third Tab Button
                     Button(action: {
-                        self.selection = 0
+                        self.selection = 2
                     }, label: {
-                        Image(systemName: "house.fill")
+                        Image(systemName: "heart.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25, alignment: .center)
                             .foregroundColor(Color(red: 32/255, green: 43/255, blue: 63/255))
-                            .opacity(selection == 0 ? 1 : 0.4)
+                            .opacity(selection == 2 ? 1 : 0.4)
                     })
+                    
+                    
                     Spacer()
                     
                     // Second Tab Button
@@ -62,23 +63,26 @@ struct ContentView: View {
                     
                     Spacer()
                     
-                    // Third Tab Button
+                    // First Tab Button
                     Button(action: {
-                        self.selection = 2
+                        self.selection = 0
                     }, label: {
-                        Image(systemName: "heart.fill")
+                        Image(systemName: "house.fill")
                             .resizable()
                             .aspectRatio(contentMode: .fit)
                             .frame(width: 25, height: 25, alignment: .center)
                             .foregroundColor(Color(red: 32/255, green: 43/255, blue: 63/255))
-                            .opacity(selection == 2 ? 1 : 0.4)
+                            .opacity(selection == 0 ? 1 : 0.4)
                     })
+                    
                     Spacer()
                     
                 })
         ,alignment: .bottom) // Align the overlay to bottom to ensure tab bar stays pinned.
         .shadow(radius: 5)
+        
     }
+    
 }
 
 

@@ -74,7 +74,7 @@ struct ModalViewPDF: View {
                                         })
                                         .padding(.leading))
         }
-        .accentColor(.white)
+        .accentColor(.black)
     }
 }
 

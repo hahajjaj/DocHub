@@ -14,12 +14,12 @@ struct Activity_Cell_View: View {
         
 //        ZStack(alignment: .leading) {
             HStack {
-                ImageView(withURL: "https://dochub.be\(activite.actor.avatar)")
-                    .clipShape(Circle())
-                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
-                    .overlay(Circle().stroke(Color.black, lineWidth: 3))
-                    .frame(width: 50)
-                    .padding([.leading, .trailing])
+//                ImageView(withURL: "https://dochub.be\(activite.actor.avatar)")
+//                    .clipShape(Circle())
+//                    .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)
+//                    .overlay(Circle().stroke(Color.black, lineWidth: 3))
+//                    .frame(width: 50)
+//                    .padding([.leading, .trailing])
                 Text("\(activite.actor.name) \(activite.verb) \(activite.target.name) (\(activite.target.slug))")
                     .font(.system(size: 13))
                     .font(.headline)
@@ -28,6 +28,7 @@ struct Activity_Cell_View: View {
             }
             .padding(.top, 10)
             .padding(.bottom, 10)
+            .padding(.horizontal, 10)
 //            .padding(.leading, 5)
 //            .padding(.trailing, 10)
 //            .padding(15)
