@@ -8,11 +8,11 @@
 import Foundation
 
 class CoursDetailsViewModel: ObservableObject {
-    let tokenn = "5732fc1a2be10525a1e0e268b38e3a453bf80467"
+    
     @Published var cours_details: CoursDetail?
     @Published var isLoading: Bool = true
     
-    func fetchCours(mnemonique: String) {
+    func fetchCours(mnemonique: String, tokenn: String) {
         guard let url = URL(string: "https://dochub.be/api/courses/\(mnemonique)/") else { return }
         
         var request = URLRequest(url: url)

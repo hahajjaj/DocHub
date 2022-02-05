@@ -16,6 +16,8 @@ struct AuthView: View {
     @Binding var signInSuccess: Bool
     @State private var showSafari: Bool = false
     
+    @ObservedObject var tokk : tokkennn
+    
     var body: some View {
             VStack {
                 Text("DocHub")
@@ -52,7 +54,7 @@ struct AuthView: View {
                 .background(Color(customGreen))
                 .padding(.vertical, 45.0)
                 .fullScreenCover(isPresented: $showSafari, content: {
-                        SFSafariViewWrapper(url: URL(string: "https://auth.ulb.be/login?service=https%3A%2F%2Fdochub.be%2Fauth-ulb")!)
+                        SFSafariViewWrapper(url: URL(string: "https://dochub.be/users/settings/")!)
                 })
             }
             .multilineTextAlignment(.center)
@@ -61,7 +63,7 @@ struct AuthView: View {
 
 struct AuthView_Previews: PreviewProvider {
     static var previews: some View {
-        AuthView(signInSuccess: .constant(true))
+        AuthView(signInSuccess: .constant(true), tokk: tokkennn())
     }
 }
 

@@ -9,12 +9,13 @@ import SwiftUI
 
 struct ContentView: View {
     
-    @ObservedObject var profils = ProfilViewModel()
+//    @ObservedObject var profils = ProfilViewModel()
     @State var selection: Int = 2
-    
-    init() {
-        self.profils.fetchUser()
-        print(profils.profil?.avatar ?? "")
+    @ObservedObject var tokk : tokkennn
+    init(objetToken: tokkennn) {
+//        self.profils.fetchUser()
+//        print(profils.profil?.avatar ?? "")
+        self.tokk = objetToken
     }
     
     var body: some View {
@@ -22,9 +23,9 @@ struct ContentView: View {
             SearcheView()
                 .tag(1)
             
-            MesCours_View()
+            MesCours_View(objetToken: tokk)
                 .tag(2)
-            ProfilView()
+            ProfilView(objetToken: tokk)
                 .tag(0)
         }
         .overlay( // Overlay the custom TabView component here
@@ -89,6 +90,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(objetToken: tokkennn())
     }
 }

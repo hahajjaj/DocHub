@@ -9,6 +9,7 @@ import SwiftUI
 
 struct Document_List_View: View {
     @ObservedObject var cours_detail = CoursDetailsViewModel()
+    @ObservedObject var tokk : tokkennn
     
     @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
 
@@ -24,8 +25,9 @@ struct Document_List_View: View {
             }
         }
     
-    init(slug: String){
-        self.cours_detail.fetchCours(mnemonique: slug)
+    init(slug: String, objetToken: tokkennn){
+        self.tokk = objetToken
+        self.cours_detail.fetchCours(mnemonique: slug, tokenn: tokk.token)
     }
     
     var body: some View {
@@ -36,12 +38,12 @@ struct Document_List_View: View {
 //                        Cours_Cell_View(document: position)
 //                    }
 //                    .border(Color.black)
-                    ActivityView3(document: position)
+                    ActivityView3(document: position, tokk: tokk)
                     
                 }
             }
             .frame(maxWidth: .infinity)
-            .edgesIgnoringSafeArea(.all)
+            .edgesIgnoringSafeArea(.horizontal)
             .listStyle(GroupedListStyle())
         }
 //        .navigationTitle(cours_detail.cours_details?.name ?? "")
@@ -62,18 +64,19 @@ struct Document_List_View: View {
 
 struct CoursDetailsView_Previews: PreviewProvider {
     static var previews: some View {
-        Document_List_View(slug: "info-f-201")
+        Document_List_View(slug: "info-f-201", objetToken: tokkennn())
     }
 }
 
 struct ActivityView3: View {
     var document: DocumentSet
+    @ObservedObject var tokk : tokkennn
 
     var body: some View {
         ZStack(alignment: .leading) {
             Color.white
 //                .cornerRadius(12)
-            Test_cell_design(document: document)
+            Test_cell_design(document: document, objetToken: tokk)
         }
         .fixedSize(horizontal: false, vertical: true)
 //        .shadow(color: Color.black.opacity(0.2), radius: 5, x: 0, y: 2)

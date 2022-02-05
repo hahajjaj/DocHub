@@ -33,14 +33,15 @@ struct ProfilView: View {
     let customDark = UIColor(rgb: 0x3f363f)
     @ObservedObject var profils = ProfilViewModel()
     @ObservedObject var activites = ActivityViewModel()
+    @ObservedObject var tokk : tokkennn
     
-    init() {
+    init(objetToken: tokkennn) {
 //        UINavigationBar.appearance().barTintColor = swiftColor
 //        UINavigationBar.appearance().backgroundColor = swiftColor
 //        UINavigationBar.appearance().titleTextAttributes = [.foregroundColor : customDark, .font: UIFont.systemFont(ofSize: 20)]
-        
-        self.profils.fetchUser()
-        self.activites.fetchActivity()
+        self.tokk = objetToken
+        self.profils.fetchUser(tokenn: tokk.token)
+        self.activites.fetchActivity(tokenn: tokk.token)
     }
     
     var body: some View {
@@ -125,7 +126,7 @@ struct ProfilView: View {
 
 struct ProfilView_Previews: PreviewProvider {
     static var previews: some View {
-        ProfilView()
+        ProfilView(objetToken: tokkennn())
     }
 }
 

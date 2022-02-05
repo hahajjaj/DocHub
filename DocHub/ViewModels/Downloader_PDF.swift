@@ -45,14 +45,13 @@ class Downloader_PDF_ViewModel: ObservableObject {
     @Published var showPDF: Bool = false
     @Published var data : Data?
     var destURLs: URL?
-    let tokenn = "5732fc1a2be10525a1e0e268b38e3a453bf80467"
 //    @Binding var isFinished: Bool
     
 //    init(isFinished: Binding<Bool>){
 //        self._isFinished = isFinished
 //    }
     
-    func fetchFile(url_param: String) {
+    func fetchFile(url_param: String, tokenn: String) {
         guard let url = URL(string: url_param) else { return }
         var request = URLRequest(url: url)
         request.setValue("Token \(tokenn)", forHTTPHeaderField: "Authorization")

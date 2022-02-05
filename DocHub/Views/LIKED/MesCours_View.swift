@@ -10,17 +10,18 @@ import SwiftUI
 struct MesCours_View: View {
     
     @ObservedObject var profils = ProfilViewModel()
+    @ObservedObject var tokk : tokkennn
     
-    
-    init() {
-        self.profils.fetchUser()
+    init(objetToken: tokkennn) {
+        self.tokk = objetToken
+        self.profils.fetchUser(tokenn: tokk.token)
     }
     
     var body: some View {
         NavigationView {
             List{
                 ForEach(profils.profil?.followedCourses ?? [], id: \.self){ position in
-                    NavigationLink(destination: Document_List_View(slug: position.slug)) {
+                    NavigationLink(destination: Document_List_View(slug: position.slug,objetToken: tokk)) {
                         ActivityView2(slug: position.slug, cours_name: position.name)
                     }
                     
@@ -46,7 +47,7 @@ struct MesCours_View: View {
 
 struct MesCours_View_Previews: PreviewProvider {
     static var previews: some View {
-        MesCours_View()
+        MesCours_View(objetToken: tokkennn())
     }
 }
 

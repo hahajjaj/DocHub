@@ -9,7 +9,6 @@ import Foundation
 
 
 class ProfilViewModel: ObservableObject {
-    let tokenn = "5732fc1a2be10525a1e0e268b38e3a453bf80467"
     @Published var profil: Profil?
     @Published var isLoading: Bool = true
     
@@ -19,7 +18,7 @@ class ProfilViewModel: ObservableObject {
         return url
     }
     
-    func fetchUser() {
+    func fetchUser(tokenn: String) {
         guard let url = URL(string: "https://dochub.be/api/me/") else { return }
         
         var request = URLRequest(url: url)

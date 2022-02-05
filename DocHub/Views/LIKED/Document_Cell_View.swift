@@ -10,9 +10,10 @@ import SwiftUI
 struct Document_Cell_View: View {
     let document_detail : DocumentSet
     @ObservedObject var downloader = Downloader_PDF_ViewModel()
-
+    @ObservedObject var tokk : tokkennn
     
-    init(document: DocumentSet){
+    init(document: DocumentSet, objetToken: tokkennn){
+        self.tokk = objetToken
         document_detail = document
     }
     
@@ -36,7 +37,7 @@ struct Document_Cell_View: View {
             }
             .padding([.top, .leading, .bottom])
             Spacer()
-            Button(action: {downloader.fetchFile(url_param: document_detail.pdfURL)}, label: {
+            Button(action: {downloader.fetchFile(url_param: document_detail.pdfURL, tokenn: tokk.token)}, label: {
                 Text("Télécharger")
             })
             .fullScreenCover(isPresented: $downloader.showPDF, content: {

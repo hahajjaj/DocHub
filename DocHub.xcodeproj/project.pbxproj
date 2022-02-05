@@ -37,6 +37,7 @@
 		BBEE5A28267CE17A001F940D /* NavigationBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE5A27267CE17A001F940D /* NavigationBarView.swift */; };
 		BBEE5A2B267D35DE001F940D /* SchulVokalDotless.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BBEE5A2A267D35DE001F940D /* SchulVokalDotless.ttf */; };
 		BBEE5A2D267D4C8C001F940D /* Profil.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBEE5A2C267D4C8C001F940D /* Profil.swift */; };
+		D0ACD5E727ADA645009379AB /* welcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0ACD5E627ADA645009379AB /* welcomeView.swift */; };
 		D0EAAFDC27AC9B5100D6254A /* AuthView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAAFDB27AC9B5100D6254A /* AuthView.swift */; };
 		D0EAAFDE27ACA42500D6254A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0EAAFDD27ACA42500D6254A /* Extensions.swift */; };
 		D0EAAFE027ACA8D500D6254A /* BebasNeue-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D0EAAFDF27ACA8D500D6254A /* BebasNeue-Regular.ttf */; };
@@ -77,6 +78,7 @@
 		BBEE5A27267CE17A001F940D /* NavigationBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationBarView.swift; sourceTree = "<group>"; };
 		BBEE5A2A267D35DE001F940D /* SchulVokalDotless.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SchulVokalDotless.ttf; sourceTree = "<group>"; };
 		BBEE5A2C267D4C8C001F940D /* Profil.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Profil.swift; sourceTree = "<group>"; };
+		D0ACD5E627ADA645009379AB /* welcomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = welcomeView.swift; sourceTree = "<group>"; };
 		D0EAAFDB27AC9B5100D6254A /* AuthView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthView.swift; sourceTree = "<group>"; };
 		D0EAAFDD27ACA42500D6254A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
 		D0EAAFDF27ACA8D500D6254A /* BebasNeue-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "BebasNeue-Regular.ttf"; sourceTree = "<group>"; };
@@ -228,6 +230,7 @@
 				BB3804EF2695E9F90022C903 /* PROFIL */,
 				D0EAAFDB27AC9B5100D6254A /* AuthView.swift */,
 				D0EAAFE327AD71EC00D6254A /* SafariAuthULB.swift */,
+				D0ACD5E627ADA645009379AB /* welcomeView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -329,6 +332,7 @@
 				BB2490902688DF7300A7382A /* Document_List_View.swift in Sources */,
 				BB3804F42695EAE50022C903 /* MesCours_View.swift in Sources */,
 				BB2490942688E0C900A7382A /* CoursDetailsModel.swift in Sources */,
+				D0ACD5E727ADA645009379AB /* welcomeView.swift in Sources */,
 				D0EAAFDC27AC9B5100D6254A /* AuthView.swift in Sources */,
 				BB24909F268BD40B00A7382A /* PDFVieweur.swift in Sources */,
 				D0EAAFE427AD71ED00D6254A /* SafariAuthULB.swift in Sources */,

@@ -35,9 +35,10 @@ struct Test_cell_design: View {
     
     let document_detail : DocumentSet
     @ObservedObject var downloader = Downloader_PDF_ViewModel()
-
+    @ObservedObject var tokk : tokkennn
     
-    init(document: DocumentSet){
+    init(document: DocumentSet, objetToken: tokkennn){
+        self.tokk = objetToken
         document_detail = document
     }
     
@@ -76,7 +77,7 @@ struct Test_cell_design: View {
                 }
                 .padding(.horizontal, 5)
                 Spacer()
-                Button(action: {downloader.fetchFile(url_param: document_detail.pdfURL)}, label: {
+                Button(action: {downloader.fetchFile(url_param: document_detail.pdfURL, tokenn: tokk.token)}, label: {
                     Image(systemName: "chevron.right.circle")
                 })
                 .buttonStyle(PlainButtonStyle())
