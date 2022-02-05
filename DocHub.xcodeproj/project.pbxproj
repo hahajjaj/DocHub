@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BB06C4D527AE038400F085FC /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06C4D427AE038400F085FC /* SearchViewModel.swift */; };
+		BB06C4D727AE0AD800F085FC /* SearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB06C4D627AE0AD800F085FC /* SearchModel.swift */; };
 		BB2490892686050B00A7382A /* NavBarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB2490882686050B00A7382A /* NavBarView.swift */; };
 		BB24908C268607F900A7382A /* BarColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24908B268607F900A7382A /* BarColor.swift */; };
 		BB2490902688DF7300A7382A /* Document_List_View.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB24908F2688DF7300A7382A /* Document_List_View.swift */; };
@@ -46,6 +48,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BB06C4D427AE038400F085FC /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		BB06C4D627AE0AD800F085FC /* SearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchModel.swift; sourceTree = "<group>"; };
 		BB2490882686050B00A7382A /* NavBarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavBarView.swift; sourceTree = "<group>"; };
 		BB24908B268607F900A7382A /* BarColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarColor.swift; sourceTree = "<group>"; };
 		BB24908F2688DF7300A7382A /* Document_List_View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document_List_View.swift; sourceTree = "<group>"; };
@@ -206,6 +210,7 @@
 				BB2490912688E09900A7382A /* CoursDetailsViewModel.swift */,
 				BB24909C268A688B00A7382A /* Downloader_PDF.swift */,
 				BB38050226962B670022C903 /* ActivityViewModel.swift */,
+				BB06C4D427AE038400F085FC /* SearchViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -216,6 +221,7 @@
 				BBEE5A2C267D4C8C001F940D /* Profil.swift */,
 				BB2490932688E0C900A7382A /* CoursDetailsModel.swift */,
 				BB380500269629840022C903 /* ActivityModel.swift */,
+				BB06C4D627AE0AD800F085FC /* SearchModel.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -323,6 +329,7 @@
 				BB24909D268A688B00A7382A /* Downloader_PDF.swift in Sources */,
 				BB2490922688E09900A7382A /* CoursDetailsViewModel.swift in Sources */,
 				BB3804FF269628E80022C903 /* ActivityView.swift in Sources */,
+				BB06C4D727AE0AD800F085FC /* SearchModel.swift in Sources */,
 				BB900FF72694F19000CE9F55 /* DocumentPreview.swift in Sources */,
 				D0EAAFDE27ACA42500D6254A /* Extensions.swift in Sources */,
 				BBB90261268504A3007F90A1 /* ProfilViewModel.swift in Sources */,
@@ -335,6 +342,7 @@
 				D0ACD5E727ADA645009379AB /* welcomeView.swift in Sources */,
 				D0EAAFDC27AC9B5100D6254A /* AuthView.swift in Sources */,
 				BB24909F268BD40B00A7382A /* PDFVieweur.swift in Sources */,
+				BB06C4D527AE038400F085FC /* SearchViewModel.swift in Sources */,
 				D0EAAFE427AD71ED00D6254A /* SafariAuthULB.swift in Sources */,
 				BB380505269634CC0022C903 /* Activity_Cell_View.swift in Sources */,
 				BB3804F92695F26E0022C903 /* Cours_cell_View.swift in Sources */,
