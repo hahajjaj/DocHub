@@ -1,4 +1,4 @@
 # DocHub
-Prototype d'application du site Dochub.be
-
-Fait par Hamza Hajjaj
+Application iPhone for website Dochub.be
+Application done in swiftUI
+Hamza Hajjaj
